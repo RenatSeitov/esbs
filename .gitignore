@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.idea/
+alembic.ini
+migration/env.py
+migration/script.py.mako
