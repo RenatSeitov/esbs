@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from settings import config
 
 engine = create_engine(
-    config.DATABASE_URL, connect_args={"check_same_thread": False}, echo=True
+    config.DATABASE_URL, future=True, echo=True
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

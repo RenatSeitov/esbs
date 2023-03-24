@@ -2,13 +2,13 @@ from database.database import SessionLocal
 
 
 class MySuperContextManager:
-    def init(self):
+    def __init__(self):
         self.db = SessionLocal()
 
-    def enter(self):
+    def __enter__(self):
         return self.db
 
-    def exit(self, exc_type, exc_value, traceback):
+    def __exit__(self, exc_type, exc_value, traceback):
         self.db.close()
 
 

@@ -4,7 +4,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy import Column, String, Integer, ForeignKey
 
 from database.database import Base
-from role_classes import RoleClasses
+from models.context.role_classes import RoleClasses
 from sqlalchemy.orm import relationship
 
 
